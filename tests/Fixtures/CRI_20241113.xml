@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompteRendu>
+  <Metadonnees>
+    <dateSeance>2024-11-13</dateSeance>
+    <numSeance>42</numSeance>
+    <parution>2024123</parution>
+  </Metadonnees>
+  <Contenu>
+    <Section>
+      <TitreStruct Ident="SOM1"><Intitule>Questions au Gouvernement</Intitule></TitreStruct>
+      <SousSection1>
+        <TitreStruct Ident="SOM2"><Intitule>Fret ferroviaire</Intitule></TitreStruct>
+        <Para><Orateur>Mme la présidente.</Orateur> La parole est à M. Ugo Bernalicis.</Para>
+        <Para><Orateur href="https://www2.assemblee-nationale.fr/tribun/fiches_id/720430.asp">M. Ugo Bernalicis.</Orateur> Monsieur le ministre, le fret recule.</Para>
+        <Para>Il recule encore.</Para>
+        <Para><Orateur>M. François Durovray,</Orateur><QualiteMouvement>ministre délégué chargé des transports.</QualiteMouvement> Il avance.</Para>
+      </SousSection1>
+    </Section>
+  </Contenu>
+</CompteRendu>

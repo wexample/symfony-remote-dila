@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Wexample\SymfonyRemoteDila\Service\AnReportParser: ~
+
+    Wexample\SymfonyRemoteDila\Service\DilaAnDebatesClient:
+        arguments:
+            $cacheDir: '%wexample_symfony_remote_dila.cache_dir%/an-debates'
+            $url: '%wexample_symfony_remote_dila.an_debates.url%'
+            $attempts: '%wexample_symfony_remote_dila.an_debates.attempts%'
+            $retryDelay: '%wexample_symfony_remote_dila.an_debates.retry_delay%'

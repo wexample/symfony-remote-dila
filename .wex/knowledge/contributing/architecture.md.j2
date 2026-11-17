@@ -1,0 +1,11 @@
+## Architecture
+
+Under `Wexample\SymfonyRemoteDila\` (PSR-4 on `src/`):
+
+- {{ path("src/Service/DilaAnDebatesClient.php") }}, the remote: the index's years and publications, a publication downloaded through Symfony's HttpClient (retried, then `RemoteException`), unpacked with GNU tar into a `.part` directory renamed once complete — a directory in the cache is a whole one.
+- {{ path("src/Service/AnReportParser.php") }} reads a `CRI_*.xml` with DOM: a `Section` or `SousSection*` holding `Para` is a point; a `Para` opening on an `Orateur` starts an intervention, the next ones without continue it; the record is read from the `Orateur`'s `fiches_id/<n>.asp` link. Until 2012 the sitting's metadata sit once at the root of the file. A file that is no XML, or holds no `CompteRendu`, raises `RemoteException`.
+- {{ path("src/Class/DebatePoint.php") }} and {{ path("src/Class/Intervention.php") }}, readonly values, the package's own: an app maps them onto its entities.
+
+### Tests
+
+Unit tests: the parser on a fixture report (`tests/Fixtures/`) and on a file of another format; the client's index, retries and status on Symfony's `MockHttpClient`.
