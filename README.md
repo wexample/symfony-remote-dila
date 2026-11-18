@@ -1,6 +1,6 @@
 # symfony-remote-dila
 
-Version: 2.0.0
+Version: 2.0.1
 
 The DILA's open data, as symfony-remotes: the verbatim reports of the Assemblée nationale, read into debate points
 
