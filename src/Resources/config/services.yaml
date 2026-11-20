@@ -12,3 +12,12 @@ services:
             $url: '%wexample_symfony_remote_dila.an_debates.url%'
             $attempts: '%wexample_symfony_remote_dila.an_debates.attempts%'
             $retryDelay: '%wexample_symfony_remote_dila.an_debates.retry_delay%'
+
+    Wexample\SymfonyRemoteDila\Service\PublicSpeechParser: ~
+
+    Wexample\SymfonyRemoteDila\Service\DilaPublicSpeechesClient:
+        arguments:
+            $cacheDir: '%wexample_symfony_remote_dila.cache_dir%/public-speeches'
+            $url: '%wexample_symfony_remote_dila.public_speeches.url%'
+            $attempts: '%wexample_symfony_remote_dila.public_speeches.attempts%'
+            $retryDelay: '%wexample_symfony_remote_dila.public_speeches.retry_delay%'

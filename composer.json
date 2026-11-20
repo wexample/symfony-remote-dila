@@ -1,6 +1,6 @@
 {
   "name": "wexample/symfony-remote-dila",
-  "description": "The DILA's open data, as symfony-remotes: the verbatim reports of the Assemblée nationale, read into debate points",
+  "description": "The DILA's open data, as symfony-remotes: the verbatim reports of the Assemblée nationale, read into debate points, and the public speeches vie-publique.fr records",
   "version": "2.0.1",
   "type": "library",
   "license": "MIT",
@@ -22,6 +22,7 @@
   ],
   "require": {
     "php": ">=8.5",
+    "wexample/php-helpers": ">=8.1.0",
     "wexample/symfony-helpers": ">=19.3.0",
     "wexample/symfony-remote": ">=2.4.0",
     "wexample/php-remote": ">=4.0.0",

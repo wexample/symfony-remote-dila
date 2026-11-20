@@ -16,6 +16,9 @@ class WexampleSymfonyRemoteDilaExtension extends AbstractWexampleSymfonyExtensio
         $container->setParameter('wexample_symfony_remote_dila.an_debates.url', $config['an_debates']['url']);
         $container->setParameter('wexample_symfony_remote_dila.an_debates.attempts', $config['an_debates']['attempts']);
         $container->setParameter('wexample_symfony_remote_dila.an_debates.retry_delay', $config['an_debates']['retry_delay']);
+        $container->setParameter('wexample_symfony_remote_dila.public_speeches.url', $config['public_speeches']['url']);
+        $container->setParameter('wexample_symfony_remote_dila.public_speeches.attempts', $config['public_speeches']['attempts']);
+        $container->setParameter('wexample_symfony_remote_dila.public_speeches.retry_delay', $config['public_speeches']['retry_delay']);
 
         $this->loadConfig(
             __DIR__,

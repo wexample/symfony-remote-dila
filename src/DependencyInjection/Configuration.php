@@ -5,6 +5,7 @@ namespace Wexample\SymfonyRemoteDila\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Wexample\SymfonyRemoteDila\Service\DilaAnDebatesClient;
+use Wexample\SymfonyRemoteDila\Service\DilaPublicSpeechesClient;
 
 class Configuration implements ConfigurationInterface
 {
@@ -22,6 +23,14 @@ class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('url')->defaultValue(DilaAnDebatesClient::DEFAULT_URL)->end()
+                        ->integerNode('attempts')->defaultValue(3)->min(1)->end()
+                        ->integerNode('retry_delay')->defaultValue(5)->min(0)->info('Seconds before the next attempt, times the attempt number.')->end()
+                    ->end()
+                ->end()
+                ->arrayNode('public_speeches')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode('url')->defaultValue(DilaPublicSpeechesClient::DEFAULT_URL)->end()
                         ->integerNode('attempts')->defaultValue(3)->min(1)->end()
                         ->integerNode('retry_delay')->defaultValue(5)->min(0)->info('Seconds before the next attempt, times the attempt number.')->end()
                     ->end()
